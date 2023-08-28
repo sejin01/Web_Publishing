@@ -1,0 +1,59 @@
+/*------기본값 설정-------*/
+/*안쪽,바깥쪽 여백*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/*ul 속성(순번) 제거*/
+ul {
+    list-style: none;
+}
+/*a 속성 제거*/
+a {
+    text-decoration: none;
+}
+/*-----------------------*/
+/*크기 지정, 중앙 배치*/
+.list {
+    width: 1000px;
+    margin: 200px auto 0;
+}
+/*자식 태그의 float 사용으로 인하여
+ 부모 태그의 높이가 사라졌기 때문에 가상 태그 생성*/
+.list::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/*이미지에 마우스를 올렸을 때 확대*/
+.list li:hover a img {
+    transform: scale(1.6);
+}
+/*너비 지정 / 사이사이 여백 = 사진의 오른쪽 여백
+왼쪽 정렬 / 영역을 벗어나면 숨김*/
+.list li {
+    /*calc 할 때 +, - 앞 뒤로 꼭 한 칸씩 띄어서 쓰기*/
+    width: calc(25% - 15px);
+    margin-right: calc(60px / 3);
+    float: left;
+    overflow: hidden;
+    /*li의 너비높이수치를 넘어가는 부분 자르기 = 영역만큼 보이기*/
+}
+/*마지막 li의 오른쪽 여백을 0으로 설정
+사진 사이사이에만 여백을 주기 위해*/
+.list li:last-child {
+    margin-right: 0;
+}
+
+/*인라인태그 : a,img   --> block처리 해줘야함
+컨텐츠태그 : img (크기가 원래 있음)*/
+.list li a {
+     /*부모 width:25%*/
+    display: block;
+}
+.list li a img {
+    /*a기준*/
+    width: 100%;
+    display: block;
+    transition: 0.6s;
+}
