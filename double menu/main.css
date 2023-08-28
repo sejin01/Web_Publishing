@@ -1,0 +1,67 @@
+/*안쪽,바깥쪽 여백*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/*ul 속성(순번) 제거*/
+ul {
+    list-style: none;
+}
+/*a 속성 제거*/
+a {
+    text-decoration: none;
+}
+/*-----------------------*/
+
+/*전체 영역*/
+div {
+    width: 300px;
+    text-align: center;
+}
+/*메인로고 a*/
+div h1 a {
+    display: block;
+    line-height: 100px;
+    background-color: #ccc;
+    color: #000;
+}
+/*--------------대메뉴--------------*/
+/*대메뉴1~4*/
+.depth01 > li > a{
+    display: block;
+    line-height: 50px;
+    background-color: #333;
+    color: #fff;
+}
+/*각각의 대메뉴에 마우스를 올렸을 때 해당 대메뉴의 a*/
+.depth01 > li:hover > a{
+    background-color: paleturquoise;
+    color: #000;
+}
+/*대메뉴에 마우스를 올렸을 때 소메뉴 높이를 지정하여 소메뉴가 나타남*/
+.depth01 li:hover .depth02{
+    height: 200px;
+}
+/*---------------------------------*/
+
+/*--------------소메뉴--------------*/
+/*소메뉴 높이를 0으로 지정하여 숨김*/
+.depth02 {
+    height: 0;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+/*모든 소메뉴의 a*/
+.depth02 li a {
+    display: block;
+    line-height: 50px;
+    background-color: #ccc;
+    color: #000;
+}
+/*소메뉴에 마우스를 올렸을 때 해당 소메뉴의 a*/
+.depth02 li:hover a {
+    background-color: #fff;
+    color: #000;
+}
+/*---------------------------------*/
