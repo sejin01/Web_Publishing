@@ -56,4 +56,5 @@ a {
     width: 100%;
     display: block;
     transition: 0.6s;
+    /*변화되는 시간*/
 }
