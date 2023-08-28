@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+div {
+    width: 300px;
+    text-align: center;
+}
+
+div h1 a {
+    display: block;
+    background-color: gray;
+    color: #000;
+    line-height: 100px;
+}
+
+.depth01 > li > a{
+    display: block;
+    background-color: #000;
+    color: #fff;
+    line-height: 50px;
+}
+.depth01 > li:hover > a{
+    background-color: aqua;
+    color: #000;
+}
+.depth01 li:hover .depth02{
+    height: 200px;
+}
+
+.depth02 {
+    height: 0;
+    overflow: hidden;
+    transition: 0.6s;
+}
+.depth02 li a{
+    display: block;
+    background-color: gray;
+    color: #000;
+    line-height: 50px;
+}
+.depth02 li:hover a {
+    background-color: #fff;
+    color: #000;
+}
