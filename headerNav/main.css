@@ -1,0 +1,74 @@
+/*------기본값 설정-------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/*-----------------------*/
+/*배경색,너비 지정
+가운데정렬*/
+#header {
+    background-color: #333;
+    width: 1280px;
+    margin: 0 auto;
+}
+/*가상태그 생성*/
+#header::after,
+#header .depth01::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#header h1{
+    float: left;
+}
+#header h1 a {
+    display: block;
+    color: #fff;
+    line-height: 50px;
+}
+
+#header nav{
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+#header .depth01 > li {
+    position: relative;
+    width: 25%;
+    float: left;
+}
+#header .depth01 > li > a{
+    display: block;
+    color: #fff;
+    line-height: 50px;
+}
+
+#header .depth01 li:hover .depth02{
+    height: 200px;
+}
+
+/*소메뉴를 떼내어야함 -> 메인콘텐트가 밀리지않음*/
+#header .depth02 {
+    /*부모 태그인 대메뉴 기준으로 소메뉴의 너비, 위치 지정*/
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    background-color: royalblue;
+     /*소메뉴 숨겨놓기 / 변화되는 시간 지정*/
+    height: 0;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+#header .depth02 li a {
+    display: block;
+    color: #fff;
+    line-height: 50px;
+}
