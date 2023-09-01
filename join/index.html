@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!--form 태그 : 사용자로부터 입력을 받을 수 있는 폼을 정의하는 태그-->
+    <!--fieldset 태그 : form 태그 안에서만 사용 가능,form 요소와 관련된 데이터들을 하나로 묶어주는 역할-->
+    <!--legend 태그 : fieldset 태그 안에서만 사용 가능, fieldset 요소의 제목-->
+    <!--span태그 : 인라인태그 / 공간 분할 태그      input태그 : 인라인태그-->
+    <!--input태그 : type, id, name(데이터의 제목), value(데이터의 값)
+        input type : text, password, radio, checkbox, file, date, number, color, submit(데이터 전송 버튼), reset
+        한개만 선택 가능 / 선택 후 취소 불가능-->
+    <!--데이터 전달할 때 속성이름을 통해 전달됨-->
+    <!--checkbox 태그 : 여러개 선택 가능 / 선택 후 취소 가능-->
+    <!--textarea 태그 : 여러 줄의 텍스트를 입력할 수 있는 텍스트 입력 영역을 정의-->
+    <form id="join" action="./join_c.html">
+        <fieldset>
+            <legend>회원가입</legend>
+            <p>
+                <span class="information">이름 </span>
+                <input type="text" placeholder="한글로 입력해주세요." required autofocus>
+            </p>
+            <p>
+                <span class="information" id="id">아이디 </span>
+                <input type="text" placeholder="영문 및 숫자 조합으로 10자리만 가능" required maxlength="10">
+                <button type="button">중복확인</button>
+            </p> 
+            <p>
+                <span class="information">비밀번호 </span>
+                <input type="password" placeholder="비밀번호 입력해주세요." required>
+            </p>
+            <p>
+                <span class="information">성별 </span>
+                <input type="radio" id="man" name="gender" value="man" checked>
+                <label for="man">남자</label>
+                <input type="radio" id="woman" name="gender" value="woman">
+                <label for="woman">여자</label>
+                <input type="radio" id="nocoment" name="gender" value="nocoment">
+                <label for="nocoment">선택x</label>
+            </p>
+            <p>
+                <span class="information">관심사 </span>
+                <input type="checkbox" id="check01" name="fav"  checked>
+                <label for="check01">사회</label>
+                <input type="checkbox" id="check02" name="fav">
+                <label for="check02">경제</label>
+                <input type="checkbox" id="check03" name="fav">
+                <label for="check03">IT</label>
+            </p>
+            <p>
+                <span class="information">증명사진 </span>
+                <input type="file" name="img-file">
+            </p>
+            <p>
+                <span class="information">날짜 </span>
+                <input type="date" name="date" min="2010-01-01" max="2023-12-31" step="1">
+            </p>
+            <p>
+                <span class="information">연령대 </span>
+                <input type="number" name="number" min="10" max="80" step="10" placeholder="10">
+            </p>
+            <p>
+                <span class="information">선호 컬러 </span>
+                <input type="color">
+            </p>
+            <p>
+                <span class="information">지역 선택 </span>
+                <select name="city">
+                    <optgroup label="서울시">
+                        <option value="Gangnam-gu">강남구</option>
+                        <option value="Seagho-gu">서초구</option>
+                        <option value="Jung-gu">중구</option>
+                    </optgroup>
+                    <optgroup label="인천광역시">
+                        <option value="Yeonsu-gu">연수구</option>
+                        <option value="Jung-gu">중구</option>
+                        <option value="Gyeyang-gu">계양구</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <span class="information">가입인사 </span>
+                <textarea name="coment" placeholder="가입인사 남기기" rows="5"></textarea>
+            </p>
+            <p>
+                <input type="reset" value="입력란 초기화">
+                <input type="submit" value="회원가입">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>  
