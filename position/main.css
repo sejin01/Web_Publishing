@@ -1,0 +1,102 @@
+/*기본 세팅*/
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+#header{
+    background-color: #ccc;
+}
+#header .container{
+    background-color: #000;
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+/*가상 태그*/
+#header .container::after,
+#header .depth01::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+#header .container h1{
+    float: left;
+    margin-left: 20px;
+}
+#header .container h1 a,
+#header .depth01 li a,
+#header .depth02 li a{
+    /*line-height 4 = font-size의 4배*/
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 4;
+    transition: 0.6s;
+}
+#header .container nav{
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+#header .depth01 > li{
+    width: 25%;
+    float: left;
+    position: relative;
+}
+
+/*z-index가 클수록 앞으로 튀어나옴*/
+#header .depth02{
+    /*부모태그인 대메뉴(depth01) li 기준*/
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    height: 0;
+    overflow: hidden;
+    transition: 0.6s;
+    z-index: 99;
+}
+#header .fake{
+    /*부모태그인 container 기준*/
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    height: 0;
+    transition: 0.6s;
+    z-index: 1;
+}
+
+/*헤더 아래 내용*/
+#content{
+    height: 400px;
+    background-color: #f00;
+}
+
+/*대메뉴에 마우스를 올렸을 때*/
+#header .depth01:hover .depth02{
+    /*소메뉴 ul의 높이를 지정해서 화면에 보이게 함**/
+    height: calc(16px * 4 * 4);
+}
+/*대메뉴에 마우스를 올렸을 때
+하지만 대메뉴인 depth01은 nav태그의 자식태그이고,
+fake은 nav와 형제태그이기 때문에 nav:hover을 사용함*/
+#header .container nav:hover + .fake{
+    /*소메뉴 뒤에 있는 div(class=fake)의 높이를 지정해서 화면에 보이게 함*/
+    height: calc(16px * 4 * 4);
+}
+/*대메뉴와 소메뉴 li에 마우스를 올렸을 때 배경색,글자색 변경*/
+#header .depth01 > li:hover > a,
+#header .depth02 li:hover > a{
+    color: #000;
+    background-color: #fff;
+}
