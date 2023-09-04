@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <form id="join" action="./join_c.html">
+        <fieldset>
+            <legend>회원가입</legend>
+            <p>
+                <span class="joinform">이름 </span>
+                <input type="text" placeholder="한글로 입력해주세요." required autofocus>
+            </p>
+            <p>
+                <span class="joinform">아이디</span>
+                <input type="text"  placeholder="영문 및 숫자 조합 10자리 이하" maxlength="10" required>
+                <button>중복 확인</button>
+            </p>
+            <p>
+                <span class="joinform">비밀번호 </span>
+                <input type="password"  placeholder="8자리 이상 입력해주세요."required>
+            </p>
+            <p>
+                <span class="joinform">성별 </span>
+                <input type="radio" name="gender" id="man" checked>
+                <label for="man">남자</label>
+                <input type="radio" name="gender" id="woman" checked>
+                <label for="woman">여자</label>
+                <input type="radio" name="gender" id="notell" checked>
+                <label for="notell">상관없음</label>
+            </p>
+            <p>
+                <span class="joinform">관심사 </span>
+                <input type="checkbox" id="check1" name="fav" checked>
+                <label for="check1">사회</label>
+                <input type="checkbox" id="check2" name="fav">
+                <label for="check2">IT</label>
+                <input type="checkbox" id="check3" name="fav">
+                <label for="check3">경제</label>
+            </p>
+            <p>
+                <span class="joinform">증명사진 </span>
+                <input type="file" name="img_file">
+            </p>
+            <p>
+                <span class="joinform">날짜 </span>
+                <input type="date" name="date" min="2010-01-01" max="2023-12-31" step="1">
+            </p>
+            <p>
+                <span class="joinform">연령대 </span>
+                <input type="number" step="10" min="10" max="80" placeholder="10">
+            </p>
+            <p>
+                <span class="joinform">선호컬러 </span>
+                <input type="color">
+            </p>
+            <p>
+                <span class="joinform">지역선택 </span>
+                <select name="city">
+                    <optgroup label="서울시">
+                        <option value="gangnam-gu">강남구</option>
+                        <option value="seocho-gu">서초구</option>
+                    </optgroup>
+                    <optgroup label="인천광역시">
+                        <option value="yeon-gu">연수구</option>
+                        <option value="bupyeong-gu">부평구</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <span class="joinform">코멘트 </span>
+                <textarea name="coment" placeholder="가입인사 남기기" rows="5" cols="5"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="회원가입 완료">
+                <input type="reset"  value="입력란 초기화">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>  
