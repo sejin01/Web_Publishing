@@ -1,0 +1,65 @@
+/*----------기본값 설정----------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+/*------------------------------*/
+
+/*전체*/
+#tab {
+    width: 600px;
+    margin: 200px auto 0;
+    display: flex;
+    /*요소들을 컨테이너의 중앙으로 정렬*/
+    justify-content: center;
+    position: relative;
+}
+
+#tab > li {
+    width: 50%;
+}
+
+/*라디오버튼 없애기*/
+#tab > li input {
+    display: none;
+}
+
+/*공지사항, 게시판 라벨
+기본 배경색은 검은색*/
+#tab > li label {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    background-color: #000;
+    color: #fff;
+}
+
+/*div 화면*/
+#tab .ab-box {
+    background-color: #ccc;
+    /*부모 tab 기준 (tab에도 position이 있어야함)*/
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    height: 300px;
+    z-index: 1;
+}
+
+/*div 화면 안에 글자를 화면의 가운데로 이동*/
+#tab .ab-box p {
+    text-align: center;
+    line-height: 300px;
+}
+/*input이 선택되었을 때 라벨의 색상을 회색으로 변경*/
+#tab li input[type="radio"]:checked + label {
+    background-color: #ccc;
+    color: #000;
+}
+/*input이 선택되었을 때 div화면의 z-index 설정*/
+#tab li input[type="radio"]:checked ~ .ab-box{
+    z-index: 999;
+}

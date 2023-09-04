@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>둘 중 하나 선택</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <ul id="tab">
+        <!--name이 같아야 둘 중 하나만 선택됨 (라디오)-->
+        <li>
+            <input type="radio" id="notice" name="tab" checked>
+            <label for="notice">공지사항</label>
+            <div class="ab-box">
+                <p>공지사항 화면</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" id="community" name="tab">
+            <label for="community">게시판</label>
+            <div class="ab-box">
+                <p>게시판 화면</p>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>  
