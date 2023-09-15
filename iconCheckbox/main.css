@@ -1,0 +1,139 @@
+* { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img { 
+    vertical-align: top; 
+}
+ul, ol, li { 
+    list-style: none; 
+}
+/* ================================================= */
+form { 
+    width: 90%; 
+    margin: 0 auto; 
+    padding: 20px; 
+    border: 1px solid blue; }
+form p { 
+    line-height: 2.5em; 
+}
+form input:disabled { 
+    border-color: rgba(255, 0, 0, 0.3); 
+    background: rgba(0, 0, 0, 0.3);
+}
+form input:enabled { 
+    background: rgba(0, 0, 255, 0.3);
+}
+/* disabled <-> enabled / disabled를 안쓰면 enabled가 기본값 */
+form input:focus { 
+    background: rgba(255, 255, 255, 1); 
+}
+form h4 { 
+    margin-top: 40px; 
+}
+
+form input[type="radio"]:checked + span { 
+    font-weight: bold;
+}
+form input[type="checkbox"]:checked + label {
+    font-weight: bold;
+}
+
+form p.radios_wrap > label + label {
+    margin-left: 20px;
+}
+form p.checks_wrap > label + input {
+    margin-left: 20px;
+}
+
+a.my_btn { 
+    display: inline-block; 
+    width: 24px;
+    height: 24px;
+    background: url("../images/img_check_nomal.gif") no-repeat; 
+    background-size: 100%;
+    text-indent: -9999999em;
+}
+a.my_btn:hover { 
+    background: url("../images/img_check_hover.gif") no-repeat;
+    background-size: 100%;}
+/* 따로 아이콘, 백그라운드 사이즈 크기 유동적, but 리소스 많아져,
+if 아이콘 24px로 만들고 싶다면 포토샵으로 작업시 48*48로 만들어야 깨지지 않음
+위드, 헤이트값 최대 48*48까지 가능*/
+
+a.btn_all_L { 
+    display: inline-block;
+    width: 48px; 
+    height: 48px; 
+    background: url("../images/img_check_all.jpg") no-repeat; 
+    background-position: -6px -7px;
+    text-indent: -9999999em;
+}
+a.btn_all_L:hover { 
+    background: url("../images/img_check_all.jpg") no-repeat; 
+    background-position: -63px -7px;
+}
+a.btn_all_S { 
+    display: inline-block;
+    width: 24px; 
+    height: 24px; 
+    background: url("../images/img_check_all.jpg") no-repeat; 
+    background-position: -6px -59px;
+    text-indent: -9999999em; }
+a.btn_all_S:hover { 
+    background: url("../images/img_check_all.jpg") no-repeat; 
+    background-position: -37px -59px;
+}
+/* 백그라운드 사이즈 크기 유동 xx 벗 리소스 간단/ 원사이즈는 절대 배경 사이즈 건들지XX 배경 포지션으로 설정 */
+
+/* ================================================= */
+form p.ad_chk {
+    position: relative;
+    padding-left: 34px;
+    line-height: 1.5;
+}
+
+form p.ad_chk input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    background: url("../images/img_check_all.jpg") no-repeat; 
+    background-position: -4px -57px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+form p.ad_chk input:checked {
+    background: url("../images/img_check_all.jpg") no-repeat; 
+    background-position: -37px -58px;
+}
+
+/* ================================================= */
+div.parent {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: orange;
+}
+div.parent > div.child{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background: blue;
+    text-indent: -99999999em;
+}
+/* ================================================= */

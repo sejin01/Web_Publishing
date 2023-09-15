@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <form action="#" method="post">
+        <p>
+            <label>아이디 : <input type="text" size="30" minlength="3" maxlength="20" 
+            placeholder="아이디를 입력하세요(3 ~ 20자)" required disabled></label>
+        </p>
+        <!-- 왜 p태그 쓰나? -->
+        <p>
+            <label for="ipt_pw">비밀번호 : </label>
+            <input type="password" id="ipt_pw" size="30" minlength="3" maxlength="20" 
+            placeholder="비밀번호를 입력하세요." required>
+        </p>
+        
+        <h4>가장 좋아하는 과목을 고르시오.(1개만)</h4>
+        <p class="radios_wrap">
+            <label><input type="radio" name="btn" value="1" required checked><span>HTML</span></label>
+            <label><input type="radio" name="btn" value="2" required><span>CSS</span></label>
+            <label><input type="radio" name="btn" value="3" required><span>Javascript</span></label>
+            <label><input type="radio" name="btn" value="4" required><span>Photoshop</span></label>
+            <label><input type="radio" name="btn" value="5" required><span>Illustrator</span></label>
+            <label><input type="radio" name="btn" value="6" required><span>없음</span></label>
+        </p>
+        <!-- span 용도? 인라인의 영역 나누려고 -->
+        <h4>관심 분야를 고르시오.(복수 선택 가능)</h4>
+        <p class="checks_wrap">
+            <input type="checkbox" name="all_chk" id="all_chk" value="전체 선택">
+            <label for="all_chk">전체 선택</label>
+
+            <input type="checkbox" name="favorite" id="favorite_01" value="쇼핑" checked>
+            <label for="favorite_01">쇼핑</label>
+            <input type="checkbox" name="favorite" id="favorite_02" value="영화">
+            <label for="favorite_02">영화</label>
+            <input type="checkbox" name="favorite" id="favorite_03" value="유튜브">
+            <label for="favorite_03">유튜브</label>
+            <input type="checkbox" name="favorite" id="favorite_04" value="낚시">
+            <label for="favorite_04">낚시</label>
+            <input type="checkbox" name="favorite" id="favorite_05" value="사진">
+            <label for="favorite_05">사진</label>
+            <input type="checkbox" name="favorite" id="favorite_06" value="여행">
+            <label for="favorite_06">여행</label>
+        </p>
+
+        <a href="#" class="my_btn">check</a>
+
+        <p>
+            <a href="#" class="btn_all_L">check</a>
+        </p>
+        <p>
+            <a href="#" class="btn_all_S">check</a>
+        </p>
+
+        <br><br><br><br><br><br>
+
+        <p class="ad_chk"><input type="checkbox" id="ad_chk" value="y">
+            <label for="ad_chk">
+                네이버 및 제휴 서비스의 이벤트・혜택 등의 정보 발송을 위해 네이버 아이디(아이디 식별값 포함), 휴대전화번호(네이버 앱 알림 또는 문자), 이메일주소를 수집합니다. 
+                네이버 아이디(아이디 식별값 포함), 휴대전화번호 및 이메일주소는 네이버 서비스 제공을 위한 필수 수집항목으로서 네이버 회원 가입 기간 동안 보관하나, 
+                이벤트 혜택 정보 수신 동의를 철회하시면 본 목적으로의 개인정보 처리는 중지됩니다. 
+                정보주체는 개인정보 수집 및 이용 동의를 거부하실 수 있으며, 미동의 시에도 서비스 이용은 가능합니다.
+                ※ 일부 서비스(별개의 회원체계 운영, 네이버 가입 후 추가 가입하는 서비스 등)의 경우, 수신에 대해 별도로 안내 드리며, 동의를 구합니다.
+            </label>
+        </p>
+
+        <br><br><br><br><br><br>
+
+        <div class="parent">
+            <div class="child">child</div>
+        </div>
+
+        <br><br><br><br><br><br>
+    </form>
+</body>
+</html>
