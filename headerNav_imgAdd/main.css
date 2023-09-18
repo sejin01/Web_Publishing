@@ -1,0 +1,84 @@
+* { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img { 
+    vertical-align: top; 
+}
+ul, ol, li { 
+    list-style: none; 
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    clear: both;
+}
+
+/*==========================*/
+nav {
+    width: 1000px;
+    margin: 0 auto;
+}
+nav > ul {
+    overflow: hidden;
+    border: 10px dotted red;
+}
+
+nav > ul > li {
+    float: left;
+    width: 20%;
+}
+nav > ul > li > a {
+    display: block;
+    width: 100%;
+    /*좌우 : 박스의 끝까지*/
+    padding: 0.5em 0;
+    background: lightgrey;
+    color: #333;
+    /*글씨와 슈도클래스 모두 가운데로 배치하기 위하여 여기에 설정*/
+    text-align: center;
+}
+
+nav > ul > li:hover > a {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+/* nav > ul > li.active > a {
+    background: #333;
+    color: white;
+    font-weight: bold;
+} */
+
+nav > ul > li > a::before {
+    content: "";
+    display: block;
+    height: 16px;
+    margin-bottom: 5px;
+}
+
+
+nav > ul > li:nth-child(1) > a::before {
+    background: url("../images/img/img1.png") no-repeat center;
+}
+nav > ul > li:nth-child(2) > a::before {
+    background: url("../images/img/img2.png") no-repeat center;
+}
+nav > ul > li:nth-child(3) > a::before {
+    background: url("../images/img/img3.png") no-repeat center;
+}
+nav > ul > li:nth-child(4) > a::before {
+    background: url("../images/img/img4.gif") no-repeat center;
+}
+nav > ul > li:nth-child(5) > a::before {
+    background: url("../images/img/img5.png") no-repeat center;
+}
