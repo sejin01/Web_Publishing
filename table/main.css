@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+#tb_tag{
+    width: 800px;
+    margin: 0 auto;
+}
+caption{
+    padding: 30px 0;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+table, th, td{
+    border: solid 1px black;
+    border-collapse: collapse;
+}
