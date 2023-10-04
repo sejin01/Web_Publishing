@@ -11,6 +11,8 @@ a {
 }
 /*------------------------------*/
 
+/*자식 태그가 position: absolute를 사용할 때 기준점이 되기 위하여
+postion: relatvie로 설정*/
 #family{
     text-align: center;
     width: 300px;
@@ -18,9 +20,12 @@ a {
     position: relative;
 }
 
+/*보이지 않도록 설정*/
 #family input{
     display: none;
 }
+
+/*패밀리 사이트 모음 체크박스*/
 #family label{
     display: block;
     color: #fff;
@@ -28,7 +33,9 @@ a {
     font-size: 15px;
     line-height: 4;
 }
-
+/*ul을 높이를 0으로 설정하여 보이지 않도록 설정
+부모태그 기준으로 자식 태그가 밑에서 위로 나타나기 때문에
+bottom: 100%로 설정*/
 #family ul{
     position: absolute;
     left: 0;
@@ -48,6 +55,9 @@ a {
     border: 1px solid #fff;
 }
 
+/*패밀리 사이트 모음 체크박스 버튼이 체크가 되어있을 때 
+ul에 높이 값을 줌
+높이 : font-size * line-height * li의 개수 + border 경계선 5개(li)*2(위,아래)+1(checkbox는 경계선이 없기 때문에) */
 #family input:checked ~ ul{
-    height: calc(15px * 4 * 5 + 5px);
+    height: calc(15px * 4 * 5 + 11px);
 }
