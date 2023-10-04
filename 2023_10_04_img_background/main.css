@@ -1,0 +1,28 @@
+/*----------기본값 설정----------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/*------------------------------*/
+#bg-box {
+    width: 400px;
+    height: 400px;
+    background: url(../images/bts.jpg);
+    background-repeat: no-repeat;
+    /*x축, y축*/
+    background-position: left top;
+    /*cover : 이미지가 잘리더라도 가득 채우려고함 
+    contain : 영역이 남더라도 이미지가 다 들어옴*/
+    background-size: contain;
+    /*이미지가 고정됨*/
+    background-attachment: fixed;
+}
+body {
+    min-height: 3000px;
+}
