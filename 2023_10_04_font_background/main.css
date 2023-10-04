@@ -1,0 +1,54 @@
+/*----------기본값 설정----------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/*------------------------------*/
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+/*------------------------------*/
+
+#bg-box {
+    width: 400px;
+    height: 400px;
+    /*liner-gradient, radial-gradient
+    그라데이션 방향 45deg : 45도 각도 , to top/bottom/left/right 상하좌우*/
+    background: linear-gradient(to top, #ff0000 30%, #ffff00, #000);
+    /*background: linear-gradient(45deg, #ff0000 30%, #ffff00, #000);*/
+    /*background: radial-gradient(#ff0000 30%, #ffff00);*/
+
+    /*x축, y축, 블러, 색깔, inset : 내부 그림자*/
+    /*box-shadow: 10px 10px 5px grey inset;*/
+    box-shadow: 10px 10px 10px;
+    /*dashed, dotted, double, soild, hidden, groove, inset, outset 등등;*/
+    border: inset 10px #000;
+}
+
+body {
+    min-height: 1000px;
+}
+
+#bg-box p {
+    text-shadow: 6px 6px 10px #333;
+    font-size: 40px;
+    color: #ffffff;
+    /*font-family: 'PyeongChangPeace-Bold';*/
+    font-family: 'Pixelify Sans';
+    width: 300px;
+    overflow: hidden;
+    /*줄바꿈 없애기*/
+    white-space: nowrap;
+    /*일정 영역 이상 벗어나면 ... 표시*/
+    text-overflow: ellipsis;
+}
