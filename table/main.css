@@ -19,6 +19,7 @@ caption{
     font-size: 20px;
     font-weight: bold;
 }
+/*경계선 한줄로 설정 / tr은 스타일이 잘 안먹음*/
 table, th, td{
     border: solid 1px black;
     border-collapse: collapse;
