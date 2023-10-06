@@ -1,0 +1,42 @@
+/*========기본값 설정==========*/
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*==================*/
+
+div{
+    position: fixed;
+    left: calc(50% - 100px);
+
+    width: 200px;
+    height: 200px;
+
+    /* 네모 깎기 */
+    border-radius: 50%;
+
+    background-color: #333;
+    border-bottom: solid 20px red;
+    border-left: solid 20px blue;
+    border-top: solid 20px red;
+    border-right: solid 20px blue;
+    animation: updown_move 1s 0.5s  infinite ease-in alternate;
+    }
+
+@keyframes updown_move{
+    0% {
+        top: 0;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 70%;
+        /* 원1000번 돌리기 */
+        transform: rotate(1000deg);
+    }
+}
