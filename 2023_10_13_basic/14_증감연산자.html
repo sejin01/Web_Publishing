@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = 10;
+        let num2 = 10;
+        let num3 = 10;
+        let num4 = 10;
+
+        let result1, result2, result3, result4;
+
+        //전치(전위)연산자 (1 증가, 감소) 
+        result1 = ++num1;
+        document.write(`${result1} <br>`);
+
+        result2 = --num2;
+        document.write(`${result2} <br>`);
+
+        //후치(후위)연산자 (1 증가, 감소) 
+        result3 = num3++;
+        document.write(`${result3} <br>`);
+        result4 = num4--;
+        document.write(`${result4} <br>`);
+    </script>
+</body>
+</html>

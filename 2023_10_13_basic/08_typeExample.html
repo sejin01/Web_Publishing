@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let count = 10;
+        let age = prompt('나이를 입력해 주세요');
+
+        count = count + Number(age);
+        //count + age로 하면 문자열과 숫자가 합쳐져서 연산이 안 됨(1030으로 나옴)
+        //Number()는 입력값 나오는 순간에만 숫자로 변환되어 나옴
+        document.write('당신의 나이에 10을 더하면 ' + count + '살 입니다.')
+    </script>
+</body>
+</html>
