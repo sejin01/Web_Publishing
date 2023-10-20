@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /* 서로 반대되는 조건에 사용하는 조건문
+    else 키워드는 반드시 if 조건문과 같이 사용함*/
+
+    /* 유저에게 id를 입력받아 아이디가 green이면 '환영한다 관리자' 띄움
+    그게 아니면 '관리자가 아니네' 띄움*/
+    let id = prompt ('아이디 좀 적어보쇼');
+
+    if(id == 'green'){
+        alert('환영한다 관리자.');
+    }else{
+        alert('누구세용...?');
+    }
+
+    // 입력받은 숫자가 10미만이고, 짝수일 경우만 '정답입니다' 노출
+    //그 외엔 전부 '틀렸어 ~'노출
+    //단, 논리연산자 (||, &&)사용 금지
+
+
+    let num = prompt('1부터 ~ 9까지 입력',0);
+
+    if (number < 10){
+        if(number % 2 == 0){
+            alert('정답입니다');
+        }else{
+            alert('틀렸습니다');
+        }
+    } else{
+        alert('틀렸씁니다');
+    }
+    
+</script>
